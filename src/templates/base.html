@@ -1,0 +1,691 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <title>Home | Amnesty International</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="keywords"
+      content="Inspiring people against injustice to bring the world closer to human rights &amp; dignity enjoyed by all."
+    />
+    <meta
+      name="description"
+      content="Inspiring people against injustice to bring the world closer to human rights &amp; dignity enjoyed by all."
+    />
+
+    <meta name="robots" content="index,follow" />
+
+    <link rel="canonical" href="https://www.amnesty.org/en/" />
+
+    <link rel="alternate" hreflang="en" href="https://www.amnesty.org/en/" />
+    <link rel="alternate" hreflang="fr" href="https://www.amnesty.org/fr/" />
+    <link rel="alternate" hreflang="es" href="https://www.amnesty.org/es/" />
+    <link rel="alternate" hreflang="ar" href="https://www.amnesty.org/ar/" />
+
+    <!--[if lte IE 8]>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="/cdn/styles/main-old-ie.css"
+      />
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+    <!--<![endif]-->
+
+    <script
+      src="https://www.amnesty.org/cdn/scripts/modernizr.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body class="en">
+    <a href="#maincontent" class="skip"> Skip To Main Content </a>
+
+    <i class="logo-print" aria-hidden="true">
+      <div class="logo__link">Amnesty International</div>
+    </i>
+
+    <div data-header-wrapper class="header-wrap">
+      <header class="header" data-header role="banner">
+        <div class="header__container" data-header-container>
+          <span class="logo h1" data-logo>
+            <a class="logo__link" href="/en/"> Amnesty International </a>
+          </span>
+
+          <div class="nav-overlay" data-nav-overlay></div>
+
+          <div class="nav-btn" hidden aria-hidden="true" data-nav-btn>
+            <span class="nav-btn__lines"></span>
+            Menu
+          </div>
+
+          <nav class="nav" data-nav role="navigation" aria-expanded="false">
+            <span class="h1 visually-hidden" id="navigation"> Main menu </span>
+
+            <div class="nav__options">
+              <div class="nav-options__text">Main menu</div>
+
+              <div class="nav-options__close" data-nav-close>CLOSE</div>
+            </div>
+            <ul class="nav-list">
+              <li class="nav-list__item has-subnav">
+                <div class="nav-list__subnav-btn" data-subnav-btn></div>
+
+                <a class="nav-list__link" href="/en/who-we-are/">
+                  Who We Are
+                </a>
+
+                <div class="nav-list--sub-container">
+                  <ul class="nav-list--sub" data-subnav>
+                    <li class="nav-list__item--sub">
+                      <a
+                        class="nav-list__link--secondary"
+                        href="/en/who-we-are/how-were-run/"
+                      >
+                        How we&#39;re run
+                      </a>
+                    </li>
+                    <li class="nav-list__item--sub">
+                      <a
+                        class="nav-list__link--secondary"
+                        href="/en/who-we-are/jobs-and-internships/"
+                      >
+                        Jobs &amp; internships
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link" href="/en/what-we-do/">
+                  What We Do
+                </a>
+              </li>
+              <li class="nav-list__item has-subnav">
+                <div class="nav-list__subnav-btn" data-subnav-btn></div>
+
+                <a class="nav-list__link" href="/en/get-involved/">
+                  Get Involved
+                </a>
+
+                <div class="nav-list--sub-container">
+                  <ul class="nav-list--sub" data-subnav>
+                    <li class="nav-list__item--sub">
+                      <a
+                        class="nav-list__link--secondary"
+                        href="/en/get-involved/take-action/"
+                      >
+                        Take Action
+                      </a>
+                    </li>
+                    <li class="nav-list__item--sub">
+                      <a
+                        class="nav-list__link--secondary"
+                        href="/en/get-involved/join/"
+                      >
+                        Join
+                      </a>
+                    </li>
+                    <li class="nav-list__item--sub">
+                      <a
+                        class="nav-list__link--secondary"
+                        href="/en/get-involved/volunteer/"
+                      >
+                        Volunteer
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list__item has-subnav">
+                <div class="nav-list__subnav-btn" data-subnav-btn></div>
+
+                <a class="nav-list__link" href="/en/latest/"> Latest </a>
+
+                <div class="nav-list--sub-container">
+                  <ul class="nav-list--sub" data-subnav>
+                    <li class="nav-list__item--sub">
+                      <a
+                        class="nav-list__link--secondary"
+                        href="/en/latest/news/"
+                      >
+                        News
+                      </a>
+                    </li>
+                    <li class="nav-list__item--sub">
+                      <a
+                        class="nav-list__link--secondary"
+                        href="/en/latest/campaigns/"
+                      >
+                        Campaigns
+                      </a>
+                    </li>
+                    <li class="nav-list__item--sub">
+                      <a
+                        class="nav-list__link--secondary"
+                        href="/en/latest/education/"
+                      >
+                        Education
+                      </a>
+                    </li>
+                    <li class="nav-list__item--sub">
+                      <a
+                        class="nav-list__link--secondary"
+                        href="/en/latest/research/"
+                      >
+                        Research
+                      </a>
+                    </li>
+                    <li class="nav-list__item--sub">
+                      <a
+                        class="nav-list__link--secondary"
+                        href="/en/latest/impact/"
+                      >
+                        Impact
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="search-btn" hidden aria-hidden="true" data-nav-search-btn>
+            <span class="search-btn__text"> Search </span>
+          </div>
+        </div>
+      </header>
+    </div>
+    {% block bread %}
+    {% endblock %}
+    <div id="maincontent" role="main">
+      {% block content %}
+      {% endblock content %}
+    </div>
+
+    
+
+    <footer class="footer print-hidden">
+      <div class="footer__container">
+        <div class="grid">
+          <div class="footer__col" data-footer-group>
+            <ul class="footer-list">
+              <li class="footer-list__item">
+                <a
+                  href="#"
+                  class="footer-list__link footer-list__link--title"
+                  data-footer-group-title
+                >
+                  ABOUT US
+                </a>
+
+                <ul class="footer-list--sub">
+                  <li class="footer-list__item print-hidden">
+                    <a
+                      href="/en/about-us/contact/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Contact Us
+                    </a>
+                  </li>
+                  <li class="footer-list__item print-hidden">
+                    <a
+                      href="/en/about-us/how-were-run/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      How We&#39;re Run
+                    </a>
+                  </li>
+                  <li class="footer-list__item print-hidden">
+                    <a
+                      href="/en/about-us/how-were-run/modern-slavery-act-transparency-statement/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Modern Slavery Act Statement
+                    </a>
+                  </li>
+                  <li class="footer-list__item print-hidden">
+                    <a
+                      href="/en/about-us/how-were-run/finances-and-pay/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Finances and Pay
+                    </a>
+                  </li>
+                  <li class="footer-list__item print-hidden">
+                    <a
+                      href="/en/about-us/how-were-run/structure-and-people/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Structure and People
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__col" data-footer-group>
+            <ul class="footer-list">
+              <li class="footer-list__item">
+                <a
+                  href="#"
+                  class="footer-list__link footer-list__link--title"
+                  data-footer-group-title
+                >
+                  RESOURCES
+                </a>
+
+                <ul class="footer-list--sub">
+                  <li class="footer-list__item">
+                    <a
+                      href="/en/media-centre/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Media Centre
+                    </a>
+                  </li>
+                  <li class="footer-list__item">
+                    <a
+                      href="/en/wire-magazine/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Wire Magazine
+                    </a>
+                  </li>
+                  <li class="footer-list__item">
+                    <a
+                      href="/en/human-rights-education/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Human Rights Education
+                    </a>
+                  </li>
+                  <li class="footer-list__item">
+                    <a
+                      href="https://www.edx.org/school/amnesty-internationalx"
+                      target="_blank"
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Human Rights Courses
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__col" data-footer-group>
+            <ul class="footer-list">
+              <li class="footer-list__item">
+                <a
+                  href="#"
+                  class="footer-list__link footer-list__link--title"
+                  data-footer-group-title
+                >
+                  GET INVOLVED
+                </a>
+
+                <ul class="footer-list--sub">
+                  <li class="footer-list__item">
+                    <a
+                      href="/en/get-involved/join/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Join
+                    </a>
+                  </li>
+                  <li class="footer-list__item">
+                    <a
+                      href="/en/get-involved/take-action/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Take Action
+                    </a>
+                  </li>
+                  <li class="footer-list__item">
+                    <a
+                      href="/en/get-involved/volunteer/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Volunteer
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__col" data-footer-group>
+            <ul class="footer-list">
+              <li class="footer-list__item">
+                <a
+                  href="#"
+                  class="footer-list__link footer-list__link--title"
+                  data-footer-group-title
+                >
+                  LATEST
+                </a>
+
+                <ul class="footer-list--sub">
+                  <li class="footer-list__item">
+                    <a
+                      href="/en/latest/news/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      News
+                    </a>
+                  </li>
+                  <li class="footer-list__item">
+                    <a
+                      href="/en/latest/campaigns/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Campaigns
+                    </a>
+                  </li>
+                  <li class="footer-list__item">
+                    <a
+                      href="/en/latest/research/"
+                      target=""
+                      class="footer-list__link footer-list__link--item"
+                    >
+                      Research
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__col--1/3 print-hidden" data-footer-group>
+            <ul class="footer-list">
+              <li class="footer-list__item">
+                <a
+                  href="#"
+                  class="footer-list__link footer-list__link--title"
+                  data-footer-group-title
+                >
+                  WORK WITH US
+                </a>
+
+                <ul class="footer-list--sub">
+                  <li class="footer-list__item">
+                    <p class="footer-list__copy">
+                      If you are talented and passionate about human rights then
+                      Amnesty International wants to hear from you.
+                    </p>
+
+                    <a href="/en/careers/" class="footer-list__btn" target="">
+                      JOBS &amp; INTERNSHIPS
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid footer__bottom">
+          <div class="footer__col--right">
+            <ul class="social-list print-hidden">
+              <li class="social-list__item">
+                <a
+                  href="https://www.facebook.com/amnesty"
+                  class="social-list__link--facebook"
+                >
+                  Like us on Facebook
+                </a>
+              </li>
+
+              <li class="social-list__item">
+                <a
+                  href="https://twitter.com/amnesty"
+                  class="social-list__link--twitter"
+                >
+                  Follow us on Twitter
+                </a>
+              </li>
+
+              <li class="social-list__item">
+                <a
+                  href="https://www.youtube.com/user/AmnestyInternational"
+                  class="social-list__link--youtube"
+                >
+                  Subscribe to us on YouTube
+                </a>
+              </li>
+
+              <li class="social-list__item">
+                <a
+                  href="https://instagram.com/amnesty"
+                  class="social-list__link--instagram"
+                >
+                  Follow us on Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__col--left">
+            <!-- <p class="footer-legal">
+              <a
+                href="/en/about-us/privacy-policy/"
+                class="footer-legal__link"
+                target=""
+              >
+                Privacy Policy
+              </a>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <a
+                href="/en/about-us/cookie-statement/"
+                class="footer-legal__link"
+                target=""
+              >
+                Cookie Statement
+              </a>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <a
+                href="/en/about-us/permissions/"
+                class="footer-legal__link"
+                target=""
+              >
+                Permissions
+              </a>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <a
+                href="/en/about-us/refunds-of-donations/"
+                class="footer-legal__link"
+                target=""
+              >
+                Refunds of donations
+              </a>
+            </p> -->
+
+            <p class="footer-copyright">
+              &copy; 2020 Amnesty International IBA Chapter
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="overlay print-hidden" data-overlay>
+      <div class="overlay__content" data-overlay-content></div>
+    </div>
+
+    <div class="overlay" data-page-overlay></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsPXB88DaBsdnKwqgsiMb8vsxHYbMKQK0"
+      defer
+    ></script>
+
+    <script
+      src="https://www.amnesty.org/cdn/scripts/main.js?v=2dd748a28403eeecb2e7039aa344ff41"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--     <script type="text/template" data-loading-template>
+      <img src="/cdn/images/layout/loading.gif" width="32" height="32" alt="" class="loading-icon" />
+    </script> -->
+
+    <form action="/en/search/">
+      <div class="search-box" data-search-box>
+        <div class="container--full-bleed">
+          <section class="search-box-inner clearfix" data-tab-container>
+            <div class="search-box__tabs">
+              <div class="grid">
+                
+              </div>
+            </div>
+
+            <div class="search-box__form-container col">
+              <div class="col col--1/4--lg not--sm"></div>
+
+              <div
+                class="site-search site-search--quick tabs--active-target"
+                aria-hidden="false"
+                data-tab-target="quick-search"
+                data-tab-target-active
+              >
+                <input
+                  class="site-search__input"
+                  data-nav-search-input
+                  placeholder="What are you looking for?"
+                  type="text"
+                  name="q"
+                />
+                <button
+                  class="site-search__submit"
+                  type="submit"
+                  data-nav-search-submit-btn
+                >
+                  Search
+                </button>
+              </div>
+          </section>
+        </div>
+      </div>
+    </form>
+
+    <!-- <div class="cookies print-hidden" data-cookies>
+      <div class="cookies__container">
+        <div class="cookies__wrapper">
+          <div class="cookies__message--wrapper">
+            <p class="cookies__message">
+              <strong>Your choice regarding cookies on this site</strong>
+              We have placed cookies on your device to help make this website
+              better. You can use this tool to change your cookie settings.
+              Otherwise, we&#39;ll assume you&#39;re OK to continue.
+            </p>
+          </div>
+
+          <div class="cookies__form--wrapper">
+            <form
+              action="/cookiemessage/hide"
+              class="cookies__form"
+              method="POST"
+              data-cookie-form
+            >
+              <input type="submit" class="cookies__btn" value="ACCEPT" />
+            </form>
+
+            <div class="cookies__form">
+              <button data-cookie-form-settings class="cookies__btn--alt">
+                SETTINGS
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <script>
+      window.addEventListener("load", function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/en/sync");
+        xhr.onload = function () {};
+        xhr.send();
+      });
+
+      //Start Visual Website Optimizer Asynchronous Code
+      var _vwo_code = (function () {
+        var account_id = 150776,
+          settings_tolerance = 2000,
+          library_tolerance = 2500,
+          use_existing_jquery = false,
+          // DO NOT EDIT BELOW THIS LINE
+          f = false,
+          d = document;
+        return {
+          use_existing_jquery: function () {
+            return use_existing_jquery;
+          },
+          library_tolerance: function () {
+            return library_tolerance;
+          },
+          finish: function () {
+            if (!f) {
+              f = true;
+              var a = d.getElementById("_vis_opt_path_hides");
+              if (a) a.parentNode.removeChild(a);
+            }
+          },
+          finished: function () {
+            return f;
+          },
+          load: function (a) {
+            var b = d.createElement("script");
+            b.src = a;
+            b.type = "text/javascript";
+            b.innerText;
+            b.onerror = function () {
+              _vwo_code.finish();
+            };
+            d.getElementsByTagName("head")[0].appendChild(b);
+          },
+          init: function () {
+            settings_timer = setTimeout(
+              "_vwo_code.finish()",
+              settings_tolerance
+            );
+            this.load(
+              "//dev.visualwebsiteoptimizer.com/j.php?a=" +
+                account_id +
+                "&u=" +
+                encodeURIComponent(d.URL) +
+                "&r=" +
+                Math.random()
+            );
+            var a = d.createElement("style"),
+              b =
+                "body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}",
+              h = d.getElementsByTagName("head")[0];
+            a.setAttribute("id", "_vis_opt_path_hides");
+            a.setAttribute("type", "text/css");
+            if (a.styleSheet) a.styleSheet.cssText = b;
+            else a.appendChild(d.createTextNode(b));
+            h.appendChild(a);
+            return settings_timer;
+          },
+        };
+      })();
+      _vwo_settings_timer = _vwo_code.init();
+    </script> -->
+  </body>
+</html>

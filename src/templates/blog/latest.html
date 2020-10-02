@@ -1,0 +1,232 @@
+{% extends 'base.html' %} {% block content %}
+
+<div id="maincontent" role="main">
+  <h1 class="visually-hidden">Latest</h1>
+
+  <form method="GET" data-filter-url="/en/api/search" data-rss-url="/en/rss">
+    <div class="container--padded-all ui--text-center clearfix">
+      <h1
+        class="h2 heading--uppercase heading--spacer-with-sub-heading heading--in-padded"
+      >
+        Everything you need to know about human rights.
+      </h1>
+      <p class="search-browse__introduction">
+        Explore our extensive library of news, blogs, films and reports, updated
+        daily.
+      </p>
+    </div>
+
+    <div class="container--full-bleed print-hidden">
+      <div class="grid filters-secondary-container">
+        <div class="col">
+          <div>
+            <div class="filters-active" data-filters-active>
+              <h2
+                class="heading--h6 heading--in-padded filters-active--is-empty"
+              >
+                My filters
+              </h2>
+              <ul class="tags">
+                <li class="tags__item filters-active--is-empty">
+                  <a
+                    href="/en/latest/"
+                    class="tags__link--clear"
+                    data-filter-remove-all
+                    >Clear all</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col col--1/2--md">
+          <h2
+            class="result-count-heading heading--sub heading--in-padded"
+            data-results-heading
+          >
+            52,630 results
+          </h2>
+        </div>
+        <!-- <div class="col col--1/2 col--1/4--md">
+          <label for="sort" class="sort__label"> Sort by </label>
+        </div>
+        <div class="col col--1/2 col--1/4--md">
+          <div class="sort__select custom-select">
+            <select name="sort" id="sort" data-search-sort>
+              <option value="date" selected="selected">Most recent</option>
+              <option value="relevance">By relevance</option>
+            </select>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </form>
+  <div class="container--full-bleed">
+    <div class="search-results grid--bg" data-results>
+        {% for post in posts %}
+        {{post.name}}
+        {% endfor %}
+      <article class="search-item">
+        <a
+          href="/en/latest/news/2020/10/ethiopian-migrants-hellish-detention-in-saudi-arabia/"
+          class="search-item__link"
+        >
+          <div class="search-item__image">
+            <div
+              class="responsive--bg lazyload search-item__image-block"
+              data-bgset=""
+            ></div>
+
+            <ul class="tags--bottom">
+              <li class="tags__item--solo">
+                <span class="tags__icon--news"> News </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="search-item__content--half">
+            <time class="search-item__date" datetime="2020-10-02T11:09:58">
+              2 October 2020
+            </time>
+
+            <h1 class="search-item__title">
+              Ethiopian migrants describe &quot;hell&quot; of detention
+            </h1>
+          </div>
+        </a>
+      </article>
+
+      <article class="search-item">
+        <a
+          href="/en/latest/news/2020/10/egypt-rare-protests-met-with-unlawful-force-and-mass-arrests/"
+          class="search-item__link"
+        >
+          <div class="search-item__image">
+            <div
+              class="responsive--bg lazyload search-item__image-block"
+              data-bgset="/remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_391_228, /remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_391_228_hi 2x [(min-width: 640px)] | /remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_615_208, /remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_615_208_hi 2x [(min-width: 346px)] | /remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_321_208, /remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_321_208_hi 2x"
+            ></div>
+
+
+            <ul class="tags--bottom">
+              <li class="tags__item--solo">
+                <span class="tags__icon--news"> News </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="search-item__content--half">
+            <p class="tags__item--faux">Egypt</p>
+
+            <time class="search-item__date" datetime="2020-10-02T10:55:46">
+              2 October 2020
+            </time>
+
+            <h1 class="search-item__title">
+              Egypt: Rare protests met with unlawful force and mass arrests
+            </h1>
+          </div>
+        </a>
+      </article>
+      <article class="search-item--bordered">
+        <a
+          class="search-item__content"
+          href="/en/documents/mde23/3125/2020/en/"
+        >
+          <ul class="tags">
+            <li class="tags__item">
+              <span class="tags__icon--report"> Research </span>
+            </li>
+          </ul>
+
+          <p class="tags__item--faux">Saudi Arabia</p>
+
+          <time class="search-item__date" datetime="2020-10-02T00:00:00">
+            2 October 2020
+          </time>
+
+          <h1 class="search-item__title--no-image">
+            Saudi Arabia: &quot;This is worse than Covid-19&quot;: Ethiopians
+            abandoned and abused in Saudi prisons
+          </h1>
+        </a>
+      </article>
+      <article class="search-item--bordered">
+        <a
+          class="search-item__content"
+          href="/en/documents/afr32/3151/2020/en/"
+        >
+          <ul class="tags">
+            <li class="tags__item">
+              <span class="tags__icon--report"> Campaigns </span>
+            </li>
+          </ul>
+
+          <time class="search-item__date" datetime="2020-10-02T00:00:00">
+            2 October 2020
+          </time>
+
+          <h1 class="search-item__title--no-image">
+            Kenya: Forced eviction leaves 3000 people homeless
+          </h1>
+        </a>
+      </article>
+      
+    </div>
+
+    <div class="pagination print-hidden" data-pagination>
+      <div class="pagination__inner">
+        <a
+          class="pagination__btn--next"
+          href="https://www.amnesty.org/en/latest/?p=2"
+          rel="next"
+          data-pagination-next
+          >Next</a
+        >
+
+        <span class="pagination__btn--prev is-disabled">Previous</span>
+
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <span class="pagination__link is-current">1</span>
+          </li>
+          <li class="pagination__item">
+            <a
+              class="pagination__link"
+              href="https://www.amnesty.org/en/latest/?p=2"
+              data-pagination-page="2"
+              >2</a
+            >
+          </li>
+          <li class="pagination__item">
+            <a
+              class="pagination__link"
+              href="https://www.amnesty.org/en/latest/?p=3"
+              data-pagination-page="3"
+              >3</a
+            >
+          </li>
+          <li class="pagination__item">
+            <span class="pagination__spacer">&hellip;</span>
+          </li>
+          <li class="pagination__item">
+            <a
+              class="pagination__link"
+              href="https://www.amnesty.org/en/latest/?p=3290"
+              data-pagination-page="3290"
+              >3290</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/template" data-dropdown-btn-template>
+    <li class="dropdown__option">
+        <button type="button" class="dropdown__btn" data-dropdown-btn data-dropdown-plural="{{plural}}">Show all {{plural}}</button>
+    </li>
+  </script>
+</div>
+
+{% endblock content %}
