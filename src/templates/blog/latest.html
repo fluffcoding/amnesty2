@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
 
 <div id="maincontent" role="main">
   <h1 class="visually-hidden">Latest</h1>
@@ -44,7 +46,7 @@
             class="result-count-heading heading--sub heading--in-padded"
             data-results-heading
           >
-            52,630 results
+            {{total}} results
           </h2>
         </div>
         <!-- <div class="col col--1/2 col--1/4--md">
@@ -64,116 +66,75 @@
   <div class="container--full-bleed">
     <div class="search-results grid--bg" data-results>
         {% for post in posts %}
-        {{post.name}}
+        {% if post.image %}
+        <article class="search-item">
+            <a
+              href="{% url 'post' post.slug %}"
+              class="search-item__link"
+            >
+              <div class="search-item__image">
+                <div
+                  class="responsive--bg lazyload search-item__image-block"
+                  data-bgset="{{post.image.url}}"
+                ></div>
+                {% if post.category %}
+                <ul class="tags--bottom">
+                    <li class="tags__item--solo">
+                      <span class="tags__icon--news"> {{post.category.name}} </span>
+                    </li>
+                  </ul>
+                {% endif %}
+              </div>
+    
+              <div class="search-item__content--half">
+                <p class="tags__item--faux">
+                  {% for tag in post.tags.all %}
+                  {{ tag.name }}
+                  
+                  {% endfor %}
+                </p>
+                <time class="search-item__date" datetime="2020-10-02T11:09:58">
+                  {{post.time|date}}
+                </time>
+    
+                <h1 class="search-item__title">
+                  {{post.name}}
+                </h1>
+              </div>
+            </a>
+          </article>
+        {% else %}
+        <article class="search-item--bordered">
+            <a
+              class="search-item__content"
+              href="{% url 'post' post.slug %}"
+            >
+            {% if post.category %}
+            <ul class="tags">
+                <li class="tags__item">
+                  <span class="tags__icon--report"> {{post.category.name}} </span>
+                </li>
+              </ul>
+            {% endif %}
+              <p class="tags__item--faux">
+                {% for tag in post.tags.all %}
+                {{ tag.name }}
+                
+                {% endfor %}
+              </p>
+              <time class="search-item__date" datetime="2020-10-02T00:00:00">
+                {{post.time|date}}
+              </time>
+    
+              <h1 class="search-item__title--no-image">
+                {{post.name}}
+              </h1>
+            </a>
+          </article>
+        {% endif %}
         {% endfor %}
-      <article class="search-item">
-        <a
-          href="/en/latest/news/2020/10/ethiopian-migrants-hellish-detention-in-saudi-arabia/"
-          class="search-item__link"
-        >
-          <div class="search-item__image">
-            <div
-              class="responsive--bg lazyload search-item__image-block"
-              data-bgset=""
-            ></div>
-
-            <ul class="tags--bottom">
-              <li class="tags__item--solo">
-                <span class="tags__icon--news"> News </span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="search-item__content--half">
-            <time class="search-item__date" datetime="2020-10-02T11:09:58">
-              2 October 2020
-            </time>
-
-            <h1 class="search-item__title">
-              Ethiopian migrants describe &quot;hell&quot; of detention
-            </h1>
-          </div>
-        </a>
-      </article>
-
-      <article class="search-item">
-        <a
-          href="/en/latest/news/2020/10/egypt-rare-protests-met-with-unlawful-force-and-mass-arrests/"
-          class="search-item__link"
-        >
-          <div class="search-item__image">
-            <div
-              class="responsive--bg lazyload search-item__image-block"
-              data-bgset="/remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_391_228, /remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_391_228_hi 2x [(min-width: 640px)] | /remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_615_208, /remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_615_208_hi 2x [(min-width: 346px)] | /remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_321_208, /remote.axd/aineupstrmediaprd.blob.core.windows.net/media/24417/sisi_gettyimages-890300370.jpg?center=0.38834951456310679%2c0.5&amp;preset=fixed_321_208_hi 2x"
-            ></div>
-
-
-            <ul class="tags--bottom">
-              <li class="tags__item--solo">
-                <span class="tags__icon--news"> News </span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="search-item__content--half">
-            <p class="tags__item--faux">Egypt</p>
-
-            <time class="search-item__date" datetime="2020-10-02T10:55:46">
-              2 October 2020
-            </time>
-
-            <h1 class="search-item__title">
-              Egypt: Rare protests met with unlawful force and mass arrests
-            </h1>
-          </div>
-        </a>
-      </article>
-      <article class="search-item--bordered">
-        <a
-          class="search-item__content"
-          href="/en/documents/mde23/3125/2020/en/"
-        >
-          <ul class="tags">
-            <li class="tags__item">
-              <span class="tags__icon--report"> Research </span>
-            </li>
-          </ul>
-
-          <p class="tags__item--faux">Saudi Arabia</p>
-
-          <time class="search-item__date" datetime="2020-10-02T00:00:00">
-            2 October 2020
-          </time>
-
-          <h1 class="search-item__title--no-image">
-            Saudi Arabia: &quot;This is worse than Covid-19&quot;: Ethiopians
-            abandoned and abused in Saudi prisons
-          </h1>
-        </a>
-      </article>
-      <article class="search-item--bordered">
-        <a
-          class="search-item__content"
-          href="/en/documents/afr32/3151/2020/en/"
-        >
-          <ul class="tags">
-            <li class="tags__item">
-              <span class="tags__icon--report"> Campaigns </span>
-            </li>
-          </ul>
-
-          <time class="search-item__date" datetime="2020-10-02T00:00:00">
-            2 October 2020
-          </time>
-
-          <h1 class="search-item__title--no-image">
-            Kenya: Forced eviction leaves 3000 people homeless
-          </h1>
-        </a>
-      </article>
-      
     </div>
-
+<!-- 
     <div class="pagination print-hidden" data-pagination>
       <div class="pagination__inner">
         <a
@@ -219,7 +180,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <script type="text/template" data-dropdown-btn-template>

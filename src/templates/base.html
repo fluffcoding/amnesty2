@@ -15,10 +15,9 @@
       content="Inspiring people against injustice to bring the world closer to human rights &amp; dignity enjoyed by all."
     />
 
-    <meta name="robots" content="index,follow" />
 
     <link rel="canonical" href="https://www.amnesty.org/en/" />
-
+    <script src="https://kit.fontawesome.com/ff00e4a8c7.js" crossorigin="anonymous"></script>
     <link rel="alternate" hreflang="en" href="https://www.amnesty.org/en/" />
     <link rel="alternate" hreflang="fr" href="https://www.amnesty.org/fr/" />
     <link rel="alternate" hreflang="es" href="https://www.amnesty.org/es/" />
@@ -52,7 +51,7 @@
       <header class="header" data-header role="banner">
         <div class="header__container" data-header-container>
           <span class="logo h1" data-logo>
-            <a class="logo__link" href="/en/"> Amnesty International </a>
+            <a class="logo__link" href="/"> Amnesty International </a>
           </span>
 
           <div class="nav-overlay" data-nav-overlay></div>
@@ -143,57 +142,36 @@
               <li class="nav-list__item has-subnav">
                 <div class="nav-list__subnav-btn" data-subnav-btn></div>
 
-                <a class="nav-list__link" href="/en/latest/"> Latest </a>
+                <a class="nav-list__link" href="{% url 'latest' %}"> Latest </a>
 
                 <div class="nav-list--sub-container">
                   <ul class="nav-list--sub" data-subnav>
+                    {% for cat in universal_categories %}
                     <li class="nav-list__item--sub">
                       <a
                         class="nav-list__link--secondary"
-                        href="/en/latest/news/"
+                        href="{% url 'category' cat.id %}"
                       >
-                        News
+                        {{cat.name}}
                       </a>
                     </li>
-                    <li class="nav-list__item--sub">
-                      <a
-                        class="nav-list__link--secondary"
-                        href="/en/latest/campaigns/"
-                      >
-                        Campaigns
-                      </a>
-                    </li>
-                    <li class="nav-list__item--sub">
-                      <a
-                        class="nav-list__link--secondary"
-                        href="/en/latest/education/"
-                      >
-                        Education
-                      </a>
-                    </li>
-                    <li class="nav-list__item--sub">
-                      <a
-                        class="nav-list__link--secondary"
-                        href="/en/latest/research/"
-                      >
-                        Research
-                      </a>
-                    </li>
-                    <li class="nav-list__item--sub">
-                      <a
-                        class="nav-list__link--secondary"
-                        href="/en/latest/impact/"
-                      >
-                        Impact
-                      </a>
-                    </li>
+                    {% endfor %}
                   </ul>
                 </div>
               </li>
             </ul>
           </nav>
+          {% if user.is_authenticated %}
+          <a href="{% url 'team:dashboard' %}">
+            <div class="lang-btn">Team</div>
+          </a>
+          {% else %}
+          <a href="{% url 'account_login' %}">
+            <div class="lang-btn">Login</div>
+          </a>
+          {% endif %}
           <div class="search-btn" hidden aria-hidden="true" data-nav-search-btn>
-            <span class="search-btn__text"> Search </span>
+            <span class="search-btn__text"> Search <i class="fas fa-search" style="opacity: 70%; margin-left: 5px;"></i></span>
           </div>
         </div>
       </header>
@@ -544,7 +522,7 @@
       <img src="/cdn/images/layout/loading.gif" width="32" height="32" alt="" class="loading-icon" />
     </script> -->
 
-    <form action="/en/search/">
+    <form action="/search/">
       <div class="search-box" data-search-box>
         <div class="container--full-bleed">
           <section class="search-box-inner clearfix" data-tab-container>

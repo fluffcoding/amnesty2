@@ -30,9 +30,17 @@ INSTALLED_APPS = [
     # 3rd party
     'tinymce',
 
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    
+    'crispy_forms',
+
     # Own
     'main',
     'blog',
+    'management',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +66,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # own
+                'main.context_processors.all_categories_context',
             ],
         },
     },
@@ -137,3 +147,27 @@ DEFAULT = {
 }
 
 TINYMCE_JS_URL = 'http://cdn.tinymce.com/4/tinymce.min.js'
+
+
+# Django Allauth
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+
+# Crispy Forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# All Auth
+
+# Sign Up Open or Close
+ACCOUNT_ADAPTER = 'amnesty.account_adapter.NoNewUsersAccountAdapter'
+
+LOGIN_REDIRECT_URL = '/team'
